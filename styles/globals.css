@@ -1,0 +1,286 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #090b12;
+  color: #f7f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.workspace {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 980px) {
+  .workspace {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.hero {
+  max-width: 680px;
+}
+
+.heroLogo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #b8c2ff;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background: rgba(15, 18, 32, 0.92);
+  display: grid;
+  gap: 1rem;
+}
+
+.card label {
+  font-weight: 700;
+}
+
+.card textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(9, 11, 18, 0.92);
+  color: #f7f7fb;
+  padding: 1rem;
+  resize: vertical;
+}
+
+.card button {
+  width: fit-content;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  background: #7c5cff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.sectionHeader p {
+  margin: 0.35rem 0 0;
+  color: #abb7ff;
+  font-size: 0.98rem;
+}
+
+.controlsRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.fieldGroup {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.fieldGroup label {
+  font-size: 0.95rem;
+}
+
+.fieldGroup select,
+.fieldGroup input[type='range'] {
+  width: 100%;
+}
+
+.stretch {
+  min-width: 0;
+}
+
+.presetsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.presetButton {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(124, 92, 255, 0.12);
+  border: 1px solid rgba(124, 92, 255, 0.24);
+  color: #f7f7fb;
+  border-radius: 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.datasetSection {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.datasetGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .datasetGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.datasetCard {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.datasetCard strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.datasetCard p {
+  margin: 0;
+  color: #c2ccff;
+  line-height: 1.5;
+}
+
+.datasetCard a {
+  color: #7c5cff;
+  text-decoration: none;
+  font-size: 0.93rem;
+}
+
+.datasetButton {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1rem;
+  background: #3bd1ff;
+  color: #090b12;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: rgba(124, 92, 255, 0.12);
+  border: 1px solid rgba(124, 92, 255, 0.20);
+  border-radius: 999px;
+  color: #f7f7fb;
+  font-size: 0.88rem;
+}
+
+.generateButton {
+  margin-top: 0.25rem;
+}
+
+.audioPanel {
+  display: grid;
+  gap: 1rem;
+}
+
+.historyList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.historyItem {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 18px;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.historyItem strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.historyItem span,
+.historyItem small {
+  color: #a7b0ff;
+  font-size: 0.88rem;
+}
+
+.recentTags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.tagButton {
+  width: 100%;
+  background: rgba(59, 209, 255, 0.14);
+  border: 1px solid rgba(59, 209, 255, 0.28);
+  color: #f7f7fb;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.status,
+.hint {
+  margin: 0;
+  color: #cbd5ff;
+}
+
+audio {
+  width: 100%;
+  border-radius: 14px;
+}
